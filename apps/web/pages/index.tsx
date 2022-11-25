@@ -1,10 +1,16 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import Typewriter from 'typewriter-effect';
+import { useState } from 'react';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function Web() {
+  const theme1 = {
+    primaryColor: "#ee81c3",
+    blue: "#00ebff",
+  };
+  const [theme, setTheme] = useState(theme1);
   return (
-    <div>
+    <div className="wrapper">
       <Typewriter
         options={{
           delay: "natural",
@@ -118,19 +124,27 @@ export default function Web() {
             font-size: 14px;
           }
           .primary-color {
-            color: #c045ff;
+            color: ${theme.primaryColor};
           }
           .blue {
-            color: #00ebff;
+            color: ${theme.blue};
           }
           .success {
             color: green;
           }
-          body {
+          html,
+          body,
+          wrapper {
             margin: 0;
             font-smoothing: antialiased;
             // font-family: PingFang;
             font-size: 14px;
+            width: 100%;
+            height: 100%;
+          }
+          #__next {
+            width: 100%;
+            height: 100%;
           }
         `}
       </style>

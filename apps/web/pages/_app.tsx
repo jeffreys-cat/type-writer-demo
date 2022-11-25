@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["vietnamese"] });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={inter.className}>
+    <main className={inter.className} style={{ width: "100%", height: "100%" }}>
       <Component {...pageProps} />
     </main>
   );
