@@ -13,13 +13,20 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.5",
     "eslint-config-custom": "*",
+    "next-transpile-modules": "^10.0.0",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@next/font": "^13.0.5",
+    "highlight.js": "^11.7.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "typewriter-effect": "^2.19.0"
+  },
   "packageManager": "npm@8.11.0"
 }
